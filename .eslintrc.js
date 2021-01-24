@@ -1,4 +1,11 @@
 module.exports = {
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   env: {
     browser: true,
     es2021: true,
@@ -22,5 +29,6 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': 0,
+    'import/extensions': 0,
   },
 };
