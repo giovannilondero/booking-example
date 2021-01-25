@@ -30,5 +30,6 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': 0,
     'import/extensions': 0,
+    'no-use-before-define': ['error', { functions: false }],
   },
 };
