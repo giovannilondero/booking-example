@@ -17,4 +17,14 @@ export default class User {
   public get email() {
     return this.props.email;
   }
+
+  public toJson(): string {
+    return JSON.stringify(this.props);
+  }
+
+  public static fromJson(input: string): User {
+    // TODO: checks on input
+    const props = JSON.parse(input);
+    return new User(props);
+  }
 }

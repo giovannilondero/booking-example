@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Center from '../../components/Center';
 import Button from '../../components/Button';
 
@@ -10,6 +11,8 @@ interface AvailableDay {
 type AvailableDays = AvailableDay[];
 
 export default function BookingPage() {
+  const router = useRouter();
+
   const availableDays: AvailableDays = [
     {
       label: 'Mar 19/01/2021',
@@ -33,6 +36,10 @@ export default function BookingPage() {
     },
   ];
 
+  const proceed = () => {
+    router.push('/booking/confirm');
+  };
+
   return (
     <>
       <Head>
@@ -43,7 +50,7 @@ export default function BookingPage() {
         <Center>
           <DaySelector days={availableDays} />
 
-          <Button>Avanti</Button>
+          <Button onClick={() => proceed()}>Avanti</Button>
         </Center>
       </main>
     </>
@@ -54,8 +61,8 @@ function DaySelector({ days }: { days: AvailableDays }) {
   return (
     <>
       {days.map((day) => (
-        <div className="flex mb-4">
-          <Day key={day.label} text={day.label} />
+        <div key={day.label} className="flex mb-4">
+          <Day text={day.label} />
           {day.availableHours.map((hour) => (
             <Hour key={hour} text={hour} />
           ))}
