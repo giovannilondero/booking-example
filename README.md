@@ -20,10 +20,10 @@ TODO
 
 ### Stack
 
-The project has been bootstrapped with Next.js, then converted to typescript.
-For code quality, I used commit-lint with husky, and eslint (for formatting too - usually prettier is my choice for that).
-Everything has been kept as close to the default settings as possible to avoid time consumption.
-Since the project's focus was not on UI, I decided to try Tailwind CSS, but I spent a short time on that.
+The project has been bootstrapped with Next.js, then converted to typescript.  
+For code quality, I used commit-lint with husky, and eslint (for formatting too - usually prettier is my choice for that).  
+Everything has been kept as close to the default settings as possible to avoid time consumption.  
+Since the project's focus was not on UI, I decided to try Tailwind CSS, but I spent a short time on that.  
 
 I chose Next.js over other frameworks mainly to have routing out of the box, and because I'm more confident with it.
 
